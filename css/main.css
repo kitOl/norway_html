@@ -108,3 +108,38 @@ body {
 
 .extra-nav-btn {
 }
+
+.header-title {
+  /* position: relative; */
+  text-align: center;
+}
+
+.header-title__small {
+  /* position: absolute; */
+  /* top: -8px; */
+  margin-bottom: -29px;
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: 0.55em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.header-title__big {
+  font-weight: 700;
+  font-size: 250px;
+
+  /* background: linear-gradient(
+    6deg,
+    rgba(0, 0, 0, 0.527) 23.32%,
+    rgba(255, 255, 255, 1) 77.08%
+  ); */
+  background: linear-gradient(
+    6deg,
+    rgba(0, 0, 0, 1) -23.32%,
+    rgba(255, 255, 255, 1) 37.08%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
