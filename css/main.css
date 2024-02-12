@@ -26,20 +26,26 @@ body {
 }
 
 .header-slider {
+  position: relative;
   width: 100%;
   height: 100%;
 }
 
 .header-slider__item {
-  position: relative;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-slider__item {
+  /* position: relative;
   width: 100%;
   height: 100%;
 
   background-size: cover;
-  background-position: center;
+  background-position: center; */
 }
 
-.header-slider__item::before {
+.header-slider::before {
   content: "";
   position: absolute;
   left: 0;
@@ -142,4 +148,147 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.header-tips {
+  display: flex;
+  justify-items: center;
+  gap: 30px;
+}
+
+.tip {
+  display: grid;
+  gap: 4px;
+
+  position: relative;
+  width: 420px;
+  height: 108px;
+
+  padding: 34px 210px 26px 95px;
+
+  background-image: url("./../img/icons/map.svg");
+  background-repeat: no-repeat;
+  background-position: 35px 40px;
+
+  color: #fff;
+}
+
+.tip::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  filter: blur(6px);
+  border-radius: 5px;
+
+  transition: background-color 0.2s ease-in;
+}
+
+.tip:hover::before {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tip__title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+}
+
+.tip__text {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.header-socials {
+  position: absolute;
+  left: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.header-seemore {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+  position: absolute;
+  left: 70px;
+  bottom: 80px;
+
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  /* text-orientation: upright; */
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.header-seemore::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tns-nav {
+  position: absolute;
+  z-index: 9;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tns-nav button {
+  display: block;
+  width: 20px;
+  height: 80px;
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.tns-nav button.tns-nav-active {
+  border-right: 2px solid rgba(255, 255, 255, 1);
+}
+
+.header-slider-controls {
+  position: absolute;
+  z-index: 9;
+  right: 70px;
+  bottom: 80px;
+
+  display: grid;
+  row-gap: 15px;
+}
+.header-slider-controls__arrows {
+  display: flex;
+  gap: 6px;
+}
+
+.header-slider-controls__count {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+  align-items: baseline;
+  font-weight: 600;
+}
+
+.header-slider-controls__count-current {
+  font-size: 32px;
+}
+
+.header-slider-controls__count-total {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.3);
 }

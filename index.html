@@ -5,23 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Norway</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./libs/tiny-slider/tiny-slider.css" />
   </head>
   <body>
     <header class="header">
       <div class="header-slider">
-        <div class="header-slider__item">
-          <img
-            class="header-slider__img-bg"
-            src="./img/header/header-bg-01.jpg"
-            alt="Bg-1"
-          />
-        </div>
-        <!-- <div class="header-slider__item bg-2"></div> -->
-        <!-- <div class="header-slider__item bg-2"></div> -->
+        <img
+          class="header-slider__item"
+          src="./img/header/bg-01.jpg"
+          alt="Bg-1"
+        />
+
+        <img
+          class="header-slider__item"
+          src="./img/header/bg-02.jpg"
+          alt="Bg-2"
+        />
+
+        <img
+          class="header-slider__item"
+          src="./img/header/bg-03.jpg"
+          alt="Bg-3"
+        />
+
+        <img
+          class="header-slider__item"
+          src="./img/header/bg-04.jpg"
+          alt="Bg-4"
+        />
       </div>
 
-      <!-- <div class="header-slider-pagination"></div> -->
-      <!-- <div class="header-slider-controls"></div> -->
+      <div class="header-slider-controls">
+        <div class="header-slider-controls__arrows">
+          <button id="sliderPrev">
+            <img src="./img/icons/chevron-left.svg" alt="Previous" />
+          </button>
+          <button id="sliderNext">
+            <img src="./img/icons/chevron-right.svg" alt="Next" />
+          </button>
+        </div>
+
+        <div class="header-slider-controls__count">
+          <span id="currentIndex" class="header-slider-controls__count-current"
+            >0</span
+          >
+          <span class="header-slider-controls__count-total">/</span>
+          <span id="totalIndex" class="header-slider-controls__count-total"
+            >0</span
+          >
+        </div>
+      </div>
 
       <div class="header__content">
         <nav class="header-nav">
@@ -52,14 +85,48 @@
 
         <div class="header-title">
           <div class="header-title__small">Explore</div>
-          <div class="header-title__big">Norway</div>
+          <h1 class="header-title__big">Norway</h1>
         </div>
-        <div class="header-tips">TIPs</div>
+
+        <div class="header-tips">
+          <a href="#!" class="tip">
+            <span class="tip__title">Trondheim</span>
+            <span class="tip__text">Plan a trip</span>
+          </a>
+
+          <a href="#!" class="tip">
+            <span class="tip__title">Geirangerfjord</span>
+            <span class="tip__text">Plan a trip</span>
+          </a>
+
+          <a href="#!" class="tip">
+            <span class="tip__title">Lofoten</span>
+            <span class="tip__text">Plan a trip</span>
+          </a>
+        </div>
       </div>
 
-      <!-- <div class="header-socials">Socials</div> -->
-      <!-- <div class="header-seemore">SEEmore</div> -->
+      <ul class="header-socials">
+        <li>
+          <a href="#!"
+            ><img src="./img/socials/facebook.svg" alt="Facebook"
+          /></a>
+        </li>
+        <li>
+          <a href="#!"><img src="./img/socials/twitter.svg" alt="Twitter" /></a>
+        </li>
+        <li>
+          <a href="#!"
+            ><img src="./img/socials/instagram.svg" alt="Instagram"
+          /></a>
+        </li>
+      </ul>
+
+      <a href="#!" class="header-seemore">See more</a>
     </header>
+
+    <script src="./libs/tiny-slider/tiny-slider.js"></script>
+
     <script src="./js/main.js"></script>
   </body>
 </html>
