@@ -27,6 +27,7 @@ const totalIndex = document.querySelector("#totalIndex");
 
 function updateSliderFraction() {
   const sliderInfo = slider.getInfo();
+
   if (sliderInfo.index > sliderInfo.pages) {
     currentIndex.innerText = "01";
   } else if (sliderInfo.index === 0) {
@@ -35,6 +36,7 @@ function updateSliderFraction() {
     currentIndex.innerText = "0" + sliderInfo.index;
   }
 
+  // currentIndex.innerText = sliderInfo.navCurrentIndex + 1;
   totalIndex.innerText = "0" + sliderInfo.pages;
 }
 
